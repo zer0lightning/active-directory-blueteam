@@ -10,6 +10,10 @@ In an elevated Command Prompt, enter the following command:
 ```
 Nltest /DBFlag:2080FFFF
 ```
+Note: To restore/disable Netlogon Logging
+```
+Nltest /DBFlag:0x0
+```
 After executing the above command, you can stop and start your Netlogon service, just to ensure that the logs are being written to the Netlogon file. The following commands help you do that.
 ```
 net stop netlogon
