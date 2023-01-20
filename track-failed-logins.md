@@ -53,6 +53,15 @@ Log Code	Description
 0xC0000234	User account has been automatically locked
 0xC0000064	User does not exist
 ```
+# Discussion
+The netlogon.log file located in %SystemRoot%\Debug can be invaluable for troubleshooting client logon and related issues. When enabled at the highest setting (0x2000ffff), it logs useful information, such as the site the client is in, the domain controller the client authenticated against, additional information related to the DC Locator process, account password expiration information, account lockout information, and even Kerberos failures.
+
+The NetLogon logging level is stored in the following registry value:
+
+HKLM\System\CurrentControlSet\Services\Netlogon Parameters\DBFlag
+If you set that registry value manually, instead of using nltest, you’ll need to restart the NetLogon service for it to take effect.
+
+One of the issues with the netlogon.log file is that it can quickly grow to several megabytes, which makes it difficult to peruse. A new tool available for Windows XP and Windows Server 2003 called nlparse can filter the contents of the netlogon.log file so that you’ll only see certain type of log entries. 
 
 # Increase Logging for NETLOGON 
 Specify maximum log file size
