@@ -1,5 +1,7 @@
 # Enable Netlogon Logging
-Source: https://www.manageengine.com/products/active-directory-audit/how-to/how-to-enable-netlogon-logging.html
+Sources: 
+- https://www.manageengine.com/products/active-directory-audit/how-to/how-to-enable-netlogon-logging.html
+- https://community.spiceworks.com/how_to/154561-tracking-failed-logon-attempts-and-lockouts-on-your-network
 
 As an IT administrator one of the most common issues you'll have to resolve quite frequently is unlocking user accounts and checking why a user was not properly authenticated into the domain. Event 4740 in the Event Viewer describes a user account that was locked out. However if you're looking for more detailed information about the account lockout such as tracking the source of a bad password, you can refer to the Netlogon log file.
 
